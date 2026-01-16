@@ -14,7 +14,7 @@ function rendTrashNotes() {
     trashContentRef.innerHTML = '';
 
     for (let indexNote = 0; indexNote < trashNotes.length; indexNote++) {
-        trashContentRef.innerHTML += getNotesTemplate(indexNote);
+        trashContentRef.innerHTML += getTrashTemplate(indexNote);
     }
 }
     
@@ -22,6 +22,9 @@ function rendTrashNotes() {
 
 function getNotesTemplate(indexNote) {
     return `<p>+ ${notes[indexNote]} <button onclick="moveToTrash(${indexNote})">x</button></p>`;
+}
+function getTrashTemplate(indexNote) {
+    return `<p> ${trashNotes[indexNote]}</p>`;
 }
 
 function addNote() {
@@ -35,7 +38,7 @@ function addNote() {
 
 function moveToTrash(indexNote) {
     
-    trashNotes.push(notes[indexNotes]);
+    trashNotes.push(notes[indexNote]);
     notes.splice(indexNote, 1); 
     rendNotes();
     rendTrashNotes();
