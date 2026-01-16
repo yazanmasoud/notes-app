@@ -1,27 +1,33 @@
-# 📝 Notes App
+# Notes App
 
-A simple and clean notes application built with **HTML, CSS, and JavaScript**.  
-This project was created to practice **DOM manipulation, arrays, and basic app logic**.
-
----
-
-## 🚀 Features
-
-- Add notes
-- Delete notes
-- Move notes to trash
-- Dynamic rendering using JavaScript
-- Simple and clean UI
+A simple note-taking app built with HTML, CSS and JavaScript.
 
 ---
 
-## 🛠 Technologies Used
+## 🎯 Learning Goals
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+This project helped me to understand:
+
+- How to work with arrays in JavaScript
+- Rendering elements dynamically
+- Handling user input
+- Using functions and parameters correctly
+- Updating the DOM efficiently
 
 ---
 
-## 📂 Project Structure
+## 🌱 Future Improvements
+
+- Restore notes from trash
+- Save notes in LocalStorage
+- Add animations
+- Improve responsive design
+
+---
+
+## 👤 Author
+
+Created by **Yazan**  
+Frontend Developer (in training)
+
 
