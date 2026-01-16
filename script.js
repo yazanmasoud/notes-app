@@ -9,6 +9,8 @@ function rendNotes() {
         contentRef.innerHTML += getNotesTemplate(indexNote);
     }
 }
+
+
 function rendTrashNotes() {
     let trashContentRef = document.getElementById('trash-content');
     trashContentRef.innerHTML = '';
@@ -17,29 +19,33 @@ function rendTrashNotes() {
         trashContentRef.innerHTML += getTrashTemplate(indexNote);
     }
 }
-    
 
 
 function getNotesTemplate(indexNote) {
     return `<p>+ ${notes[indexNote]} <button onclick="moveToTrash(${indexNote})">x</button></p>`;
 }
+
+
 function getTrashTemplate(indexNote) {
     return `<p> ${trashNotes[indexNote]}</p>`;
 }
 
+
 function addNote() {
     let inputRef = document.getElementById('inputRef');
     let inputRefValue = inputRef.value;
-
+    if (inputRefValue.length >0){
     notes.push(inputRefValue);
     rendNotes();
     inputRef.value = '';
+    }
 }
 
+
 function moveToTrash(indexNote) {
-    
+
     trashNotes.push(notes[indexNote]);
-    notes.splice(indexNote, 1); 
+    notes.splice(indexNote, 1);
     rendNotes();
     rendTrashNotes();
 }
