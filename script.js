@@ -50,3 +50,8 @@ function moveToTrash(indexNote) {
     rendTrashNotes();
 }
 
+function deletTrash() {
+    trashNotes = [''];
+    rendTrashNotes();
+}
+
