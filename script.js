@@ -22,7 +22,7 @@ function rendTrashNotes() {
 
 
 function getNotesTemplate(indexNote) {
-    return `<p>+ ${notes[indexNote]} <button onclick="moveToTrash(${indexNote})">x</button></p>`;
+    return `<p>+ ${notes[indexNote]} <button onclick="moveToTrash(${indexNote})"><img src="./assets/icon/icons8-delete-48.png" alt=""></button></p>`;
 }
 
 

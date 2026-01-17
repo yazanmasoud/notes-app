@@ -119,3 +119,18 @@ h2 {
     justify-content: center;
     align-items: flex-start;
 }
+/* Delete icon button */
+#content button img,
+#trash-content button img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Hover effect */
+#content button:hover img,
+#trash-content button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
