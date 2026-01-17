@@ -58,7 +58,7 @@ function restoreNote(TrashNoteIndex) {
 
 
 function deletTrash() {
-    trashNotes = [''];
+    trashNotes = [];
     rendTrashNotes();
 }
 

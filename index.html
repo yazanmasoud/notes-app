@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes App</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/standard.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Notes App</h1>
+    <header class="MainHeader">
+
     </header>
 
-    <main>
-        <section class="add-note">
-            <input id="inputRef" type="text" placeholder="Write a note..." />
-            <button onclick="addNote()">Add Note</button>
-        </section>
+    <main class="PageMain">
+        <div class="MyNotesBlock">
+            <section class="AddNote">
+                <input id="inputRef" type="text" placeholder="Write a note..." />
+                <button onclick="addNote()">Add Note</button>
+            </section>
 
-        <section>
-            <h2>Notes</h2>
-            <div id="content"></div>
-        </section>
+            <section>
+                <h2>Notes</h2>
+                <div id="content"></div>
+            </section>
 
-        <section>
-            <h2>Trash</h2>
-            <div id="trash-content"></div>
-        </section>
-        <button onclick="deletTrash()">Delete Trash</button>
+            <section>
+                <h2>Trash</h2>
+                <div id="trash-content"></div>
+            </section>
+            <button onclick="deletTrash()">Delete Trash</button>
+        </div>
     </main>
+    <footer class="MainFooter">
+
+    </footer>
 </body>
+
 </html>

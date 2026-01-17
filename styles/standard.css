@@ -1,9 +1,16 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
-    scroll-behavior: smooth;
+    padding: 0;
+}
+
+body {
+    background: #f4f6f8;
 }
 
 a{
     text-decoration: none;
+}
+main{
+    flex: 1;
 }
