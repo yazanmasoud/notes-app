@@ -21,8 +21,8 @@
         <section class="MyNotesBlock">
             <div class="AddNote">
                 <div>
-                    <input id="noteInputRef" type="text" placeholder="Write a note..." />
                     <input id="titleInputRef" type="text" placeholder="Write a title..." />
+                    <input id="noteInputRef" type="text" placeholder="Write a note..." />
                 </div>
                 <button class="AddNoteButton" onclick="addNote()">Add Note</button>
             </div>
@@ -30,7 +30,7 @@
 
         <section class="MyNotesBlock">
             <h2>Notes</h2>
-            <div class="NoteBlock">
+            <div id="noteBlock" class="NoteBlock">
                 <h3 id="noteTitle"></h3>
                 <div class="Content" id="content"></div>
             </div>
