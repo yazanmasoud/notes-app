@@ -18,23 +18,31 @@
     </header>
 
     <main class="PageMain">
-        <div class="MyNotesBlock">
-            <section class="AddNote">
-                <input id="inputRef" type="text" placeholder="Write a note..." />
-                <button onclick="addNote()">Add Note</button>
-            </section>
+        <section class="MyNotesBlock">
+            <div class="AddNote">
+                <div>
+                    <input id="noteInputRef" type="text" placeholder="Write a note..." />
+                    <input id="titleInputRef" type="text" placeholder="Write a title..." />
+                </div>
+                <button class="AddNoteButton" onclick="addNote()">Add Note</button>
+            </div>
+        </section>
 
-            <section>
-                <h2>Notes</h2>
+        <section class="MyNotesBlock">
+            <h2>Notes</h2>
+            <div class="NoteBlock">
+                <h3 id="noteTitle"></h3>
                 <div class="Content" id="content"></div>
-            </section>
+            </div>
+        </section>
 
-            <section>
+        <section class="MyNotesBlock">
+            <div>
                 <h2>Trash</h2>
                 <div class="TrashContent" id="trash-content"></div>
-            </section>
-            <button onclick="deletTrash()">Delete Trash</button>
-        </div>
+            </div>
+            <button class="DeleteTrashButton" onclick="deletTrash()">Delete Trash</button>
+        </section>
     </main>
     <footer class="MainFooter">
 

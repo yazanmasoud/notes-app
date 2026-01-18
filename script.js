@@ -1,12 +1,30 @@
 let notes = [];
+let notesTitle = [];
 let trashNotes = [];
+
+
+function getNotesTemplate(indexNote) {
+    return `<p>+ ${notes[indexNote]} <button onclick="moveToTrash(${indexNote})"><img src="./assets/icon/icons8-delete-48.png" alt=""></button></p>`;
+}
+
+function getTitleNoteTemplate(indexNote) {
+        return `<h3> ${notesTitle[indexNote]} </p>`;
+
+}
+
+function getTrashTemplate(indexNote) {
+    return `<p> ${trashNotes[indexNote]} <button onclick="restoreNote(${indexNote})"><img src="./assets/icon/icons8-reload-30.png" alt=""></button></p>`;
+}
 
 function rendNotes() {
     let contentRef = document.getElementById('content');
+    let titleRef = document.getElementById('noteTitle');
+    titleRef.innerHTML ='';
     contentRef.innerHTML = '';
 
     for (let indexNote = 0; indexNote < notes.length; indexNote++) {
         contentRef.innerHTML += getNotesTemplate(indexNote);
+        titleRef.innerHTML += getTitleNoteTemplate(indexNote);
     }
 }
 
@@ -22,13 +40,18 @@ function rendTrashNotes() {
 
 
 function addNote() {
-    let inputRef = document.getElementById('inputRef');
-    let inputRefValue = inputRef.value;
-    if (inputRefValue.length > 0) {
+    let noteInputRef = document.getElementById('noteInputRef');
+    let titleInputRef = document.getElementById('titleInputRef');
+    let inputRefValue = noteInputRef.value;
+    let titleRefValue = titleInputRef.value
+    if (inputRefValue.length > 0 && titleRefValue.length >0) {
         notes.push(inputRefValue);
+        notesTitle.push(titleRefValue);
         saveToLocalStorage();
         rendNotes();
-        inputRef.value = '';
+        noteInputRef.value = '';
+        titleInputRef.value= '';
+
     }
 }
 
