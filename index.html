@@ -18,31 +18,42 @@
     </header>
 
     <main class="PageMain">
-        <section class="MyNotesBlock">
-            <div class="AddNote">
-                <div>
-                    <input id="titleInputRef" type="text" placeholder="Write a title..." />
-                    <input id="noteInputRef" type="text" placeholder="Write a note..." />
-                </div>
-                <button class="AddNoteButton" onclick="addNote()">Add Note</button>
-            </div>
-        </section>
+        
+            <div class="TopColumn">
+                <section class="MyNotesBlock">
+                    <div class="AddNote">
+                        <div>
+                            <input id="titleInputRef" type="text" placeholder="Write a title..." />
+                            <input id="noteInputRef" type="text" placeholder="Write a note..." />
+                        </div>
+                        <button class="AddNoteButton" onclick="addNote()">Add Note</button>
+                    </div>
+                </section>
 
-        <section class="MyNotesBlock">
-            <h2>Notes</h2>
-            <div id="noteBlock" class="NoteBlock">
-                <h3 id="noteTitle"></h3>
-                <div class="Content" id="content"></div>
-            </div>
-        </section>
+                <section class="MyNotesBlock">
+                    <h2>Notes</h2>
+                    <div id="noteBlock" class="NoteBlock">
+                        <h3 id="noteTitle"></h3>
+                        <div class="Content" id="content"></div>
+                    </div>
+                </section>
 
-        <section class="MyNotesBlock">
-            <div>
-                <h2>Trash</h2>
-                <div class="TrashContent" id="trash-content"></div>
+                <section class="MyNotesBlock">
+                    <div>
+                        <h2>Trash</h2>
+                        <div class="TrashContent" id="trash-content"></div>
+                    </div>
+                    <button class="DeleteTrashButton" onclick="deletTrash()">Delete Trash</button>
+                </section>
             </div>
-            <button class="DeleteTrashButton" onclick="deletTrash()">Delete Trash</button>
-        </section>
+                <section class="MyNotesBlock">
+                    <h2>Archive</h2>
+                    <div id="archiveBlock" class="NoteBlock">
+                        <h3 id="archiveTitle"></h3>
+                        <div class="Content" id="archive-content"></div>
+                    </div>
+                </section>
+        
     </main>
     <footer class="MainFooter">
 

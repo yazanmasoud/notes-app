@@ -40,12 +40,17 @@ body {
    ========================= */
 /* Zentriert den Hauptinhalt horizontal */
 .PageMain {
-    flex: 1;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
+    gap: 50px ;
 }
 
+.TopColumn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
 
 /* =========================
    NOTIZ-BLOECKE (KARTEN)
