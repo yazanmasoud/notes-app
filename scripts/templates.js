@@ -3,6 +3,8 @@ function getNotesTemplate(index) {
     return `<div class="SingleNote">
               <h3>${allNotes.notes[index].title}</h3>
               <p>${allNotes.notes[index].text}
+              <button onclick="moveNotes(${index} , 'notes' , 'archiveNotes')"><img src="./assets/icon/icons8-save-50.png"></button>
+
               <button onclick="moveNotes(${index} , 'notes' , 'trashNotes')">
               <img src="./assets/icon/icons8-delete-48.png"></button>
               </p>
@@ -11,9 +13,11 @@ function getNotesTemplate(index) {
 
 function getArchiveTemplate(index) {
     return `<div class="SingleNote">
-              <h3>${allNotes.notes[index].title}</h3>
-              <p>${allNotes.notes[index].text}
-              <button onclick="moveNotes(${index} , 'notes' , 'archiveNotes')">
+              <h3>${allNotes.archiveNotes[index].title}</h3>
+              <p>${allNotes.archiveNotes[index].text}
+              <button onclick="moveNotes(${index} , 'archiveNotes' , 'notes')">
+              <img src="./assets/icon/icons8-refresh-32.png" alt="refresh icon"></button>
+              <button onclick="moveNotes(${index} , 'archiveNotes' , 'trashNotes')">
               <img src="./assets/icon/icons8-delete-48.png"></button>
               </p>
             </div>`;

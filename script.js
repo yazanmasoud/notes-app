@@ -13,6 +13,7 @@ function moveNotes(indexNote, startKey, destinationKey) {
     saveToLocalStorage();
     rendNotes();
     rendTrashNotes();
+    rendArchiveNotes();
 }
 
 
@@ -24,7 +25,6 @@ function rendNotes() {
     for (let i = 0; i < allNotes.notes.length; i++) {
         contentRef.innerHTML += getNotesTemplate(i);
     }
-
 }
 
 
@@ -36,7 +36,17 @@ function rendTrashNotes() {
     for (let i = 0; i < allNotes.trashNotes.length; i++) {
         trashContentRef.innerHTML += getTrashTemplate(i);
     }
+}
 
+
+/* ---------- Render archive ---------- */
+function rendArchiveNotes() {
+    let archiveContentRef = document.getElementById('archive-content');
+    archiveContentRef.innerHTML = '';
+
+       for (let i = 0; i < allNotes.archiveNotes.length; i++) {
+        archiveContentRef.innerHTML += getArchiveTemplate(i);
+    }
 }
 
 
@@ -83,5 +93,7 @@ function loadFromLocalStorage() {
 
     rendNotes();
     rendTrashNotes();
+    rendArchiveNotes();
+
 }
 
