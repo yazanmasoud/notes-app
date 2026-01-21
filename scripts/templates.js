@@ -11,6 +11,8 @@ function getNotesTemplate(index) {
             </div>`;
 }
 
+
+/* ---------- TRASH TEMPLATE ---------- */
 function getArchiveTemplate(index) {
     return `<div class="SingleNote">
               <h3>${allNotes.archiveNotes[index].title}</h3>
@@ -22,7 +24,6 @@ function getArchiveTemplate(index) {
               </p>
             </div>`;
 }
-
 
 
 /* ---------- TRASH TEMPLATE ---------- */
